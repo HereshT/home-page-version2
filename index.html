@@ -439,6 +439,34 @@
                         add_item();
 
                     });
+                    
+                    var Images_link;
+
+
+Images_link = ['https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-tivua-island-fiji-1024x683.jpg', 'https://media.fshoq.com/images/117/beautiful-island-with-a-sandy-beach-and-boat-blue-water-117-medium.jpg', 'https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-seven-mile-beach-grand-cayman-1024x683.jpg'];
+
+
+document.getElementById('next-image').addEventListener('click', (event) => {
+  let element_frame = document.getElementById('frame');
+  element_frame.replaceChildren();
+  let new_img = document.createElement('img');
+  new_img.setAttribute("src", Images_link[0]);
+
+  element_frame.appendChild(new_img);
+  Images_link.unshift(Images_link.pop());
+
+});
+
+document.getElementById('previous-image').addEventListener('click', (event) => {
+  let element_frame2 = document.getElementById('frame');
+  element_frame2.replaceChildren();
+  let new_img2 = document.createElement('img');
+  new_img2.setAttribute("src", Images_link.slice(-1)[0]);
+
+  element_frame2.appendChild(new_img2);
+  Images_link.unshift(Images_link.pop());
+
+});
                 </script>
 
                 <br><br>
@@ -473,6 +501,40 @@
                 <!-- Project: Select a random facilitator -->
 
                 <h3>Project: Build an image carousel</h3>
+                 
+<div id="main-box" style="object-fit: contain;background-color:lightpink; box-sizing:border-box; color:rgb(51, 51, 51); display:block; height: 642px; width: 500px; text-align:center;">
+
+<div id="carousel-box" style="background-color:lightblue; height: 110px; margin-top:10px">
+
+ <div id="img">  
+ 
+ <img  src="https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-seven-mile-beach-grand-cayman-1024x683.jpg" width="90"> 
+ 
+<img src="https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-tivua-island-fiji-1024x683.jpg" width="90"> 
+                                                                                     <img src="https://media.fshoq.com/images/117/beautiful-island-with-a-sandy-beach-and-boat-blue-water-117-medium.jpg" width="90"> 
+</div>
+
+<bu ton id="previous-image"> </button>
+
+<button id="previous-image" style=" color: blue; display:inline-block; font-size: 15px; width: 70px; background-color: rgb(255, 216, 200); padding:8px; margin :4px;; border-radius:50px;">Previous</button>
+
+  
+                                                                                                                                               
+<button id="next-image" style=" color: blue; display:inline-block; font-size: 15px; width: 70px; background-color: rgb(255, 216, 200); padding:8px; margin:4px; border-radius:50px;">Next</button></div>
+ 
+   <div id="frame" style="object-fit: cover; background-color:red; box-sizing:border-box; color:rgb(51, 51, 51); display:inline-flex; height: 500px; width: 500px; text-align:center; margin-top:20px;">
+
+
+</div>
+                                                                    
+  </div>
+                
+                <br> <br>
+ 
+
+     
+                
+                
             </div>
 
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
