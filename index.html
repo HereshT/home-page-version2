@@ -278,6 +278,172 @@
                 <div class="section-title">
                     <h2>CYF Blocks</h2>
                 </div>
+                
+                  <!-- Project: Todo List -->
+                <h3>Project: Todo List</h3>
+
+                <!-- Create a todo list -->
+
+                <style>
+                    #nav {
+                        width: 100%;
+                        margin: 5px 0;
+                    }
+                    
+                    #nav h2 {
+                        font-size: 30px;
+                        color: yellow;
+                    }
+                    
+                    #check {
+                        font-size: 20px;
+                        height: 33px;
+                        text-align: left;
+                        padding: 0 10px;
+                        margin: 10 20px;
+                        border-radius: 28px;
+                        background-color: white;
+                        color: black;
+                        display: inline-block;
+                    }
+                    
+                    #check-btn {
+                        font-size: 18px;
+                        text-align: left;
+                        padding: 4px;
+                        margin: 10 px;
+                        border-radius: 28px;
+                        background-color: black;
+                        color: white;
+                        display: inline-block;
+                    }
+                    
+                    #lili {
+                        font-size: 25px;
+                        text-align: left;
+                        margin: 0 10px;
+                        color: blue;
+                        text-align: left;
+                        display: inline-block;
+                    }
+                    
+                    #user-input {
+                        text-align: left;
+                    }
+                    
+                    #user-input button {
+                        cursor: pointer;
+                        border: 1px solid rgb(233, 225, 225);
+                        background-color: blanchedalmond;
+                        width: fit-content;
+                        padding: 5px;
+                        margin-left: 5px;
+                    }
+                </style>
+
+
+
+                <div id="container-items" style=" 
+                          border: 
+                          solid 2px red;
+                           width: 600px;
+                             height: 650px; 
+                            background-color: rgb(255, 0, 20);
+                           color: rgb(0, 0, 0);
+                           cursor: pointer;
+                           border-radius: 20px;
+                            padding: 5px;
+                           margin: auto;
+                           font-size: 15px;">
+                    <div id="container">
+                        <div id="nav">
+                            <h2>To-do List</h2>
+                            <div id="user-input">
+                                <input id="input" type="text" style="width: 200px; height: 35px;"><button id="button">Add Todo</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="todo-items" style=" background-color: #add8e6;
+                           color: rgb(255, 255, 255);
+                           cursor: pointer;
+                            height: 450px; 
+                           width: 300px;
+                           border-radius: 10px;
+                           margin-top: 5px;
+                            padding: 4px;
+                           font-size: 18px;
+                            justify-content: space-around;
+                           width: 100%;
+        display: inline-block; 
+                            margin-top: 10px;
+                           color: black;">
+
+                        <ul id="list1" style="display: inline-block; text-align: left; "></ul>
+
+
+
+
+                    </div>
+
+
+                </div>
+
+                <script>
+                    var array, item;
+
+                    function getNumberOrString(value) {
+                        // Convert a string value to a number if possible
+                        let number_value = Number(value);
+                        if (Number.isNaN(number_value)) {
+                            return value
+                        } else {
+                            return number_value
+                        }
+                    }
+
+                    // Describe this function...
+                    function add_item() {
+                        if (--window.LoopTrap <= 0) throw "Infinite loop.";
+                        array.unshift(getNumberOrString(document.getElementById('input').value));
+                        array.forEach((item) => {
+                            let element_list1 = document.getElementById('list1');
+                            let new_li = document.createElement('li');
+                            new_li.setAttribute("id", 'lili');
+                            new_li.innerText = array.shift();
+                            let new_input = document.createElement('input');
+                            new_input.setAttribute("id", 'check');
+                            new_input.style.visibility = (true) ? 'visible' : 'hidden';
+
+                            new_li.appendChild(new_input);
+                            let new_button = document.createElement('button');
+                            new_button.setAttribute("id", 'check-btn');
+                            new_button.innerText = 'done';
+
+                            new_button.addEventListener('click', (event) => {
+                                new_button.style.backgroundColor = '#ff0000';
+
+                            });
+                            new_li.appendChild(new_button);
+
+                            element_list1.appendChild(new_li);
+                        });
+                    }
+
+
+                    array = [];
+
+
+                    document.getElementById('button').addEventListener('click', (event) => {
+                        add_item();
+
+                    });
+                </script>
+
+                <br><br>
+
+                <!-- Create a todo list -->
 
                 <!-- Project: Select a random facilitator -->
                 <h3>Project: Select a random facilitator</h3>
