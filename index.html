@@ -440,33 +440,7 @@
 
                     });
                     
-                    var Images_link;
-
-
-Images_link = ['https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-tivua-island-fiji-1024x683.jpg', 'https://media.fshoq.com/images/117/beautiful-island-with-a-sandy-beach-and-boat-blue-water-117-medium.jpg', 'https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-seven-mile-beach-grand-cayman-1024x683.jpg'];
-
-
-document.getElementById('next-image').addEventListener('click', (event) => {
-  let element_frame = document.getElementById('frame');
-  element_frame.replaceChildren();
-  let new_img = document.createElement('img');
-  new_img.setAttribute("src", Images_link[0]);
-
-  element_frame.appendChild(new_img);
-  Images_link.unshift(Images_link.pop());
-
-});
-
-document.getElementById('previous-image').addEventListener('click', (event) => {
-  let element_frame2 = document.getElementById('frame');
-  element_frame2.replaceChildren();
-  let new_img2 = document.createElement('img');
-  new_img2.setAttribute("src", Images_link.slice(-1)[0]);
-
-  element_frame2.appendChild(new_img2);
-  Images_link.unshift(Images_link.pop());
-
-});
+                  
                 </script>
 
                 <br><br>
@@ -730,7 +704,34 @@ document.getElementById('previous-image').addEventListener('click', (event) => {
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js">
+      var Images_link;
+
+
+Images_link = ['https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-tivua-island-fiji-1024x683.jpg', 'https://media.fshoq.com/images/117/beautiful-island-with-a-sandy-beach-and-boat-blue-water-117-medium.jpg', 'https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-seven-mile-beach-grand-cayman-1024x683.jpg'];
+
+
+document.getElementById('next-image').addEventListener('click', (event) => {
+  let element_frame = document.getElementById('frame');
+  element_frame.replaceChildren();
+  let new_img = document.createElement('img');
+  new_img.setAttribute("src", Images_link[0]);
+
+  element_frame.appendChild(new_img);
+  Images_link.unshift(Images_link.pop());
+
+});
+
+document.getElementById('previous-image').addEventListener('click', (event) => {
+  let element_frame2 = document.getElementById('frame');
+  element_frame2.replaceChildren();
+  let new_img2 = document.createElement('img');
+  new_img2.setAttribute("src", Images_link.slice(-1)[0]);
+
+  element_frame2.appendChild(new_img2);
+  Images_link.unshift(Images_link.pop());
+
+});</script>
 
 </body>
 
