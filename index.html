@@ -65,12 +65,11 @@
         </div>
     </header>
     <!-- End Header -->
-
-    <!-- ======= Hero Section ======= -->
+ <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
         <div class="hero-container" data-aos="fade-in">
             <h1>Welcome To My Page</h1> <br>
-            <p>I am a <span class="typed" data-typed-items="Code Your Future's #Scot-6 Trainee"></span></p>
+            <p>I am a<span class="typed" data-typed-items="Code Your Future's #Scot-6 Trainee "></span></p>
         </div>
     </section>
     <!-- End Hero -->
@@ -278,8 +277,8 @@
                 <div class="section-title">
                     <h2>CYF Blocks</h2>
                 </div>
-                
-                  <!-- Project: Todo List -->
+
+                <!-- Project: Todo List -->
                 <h3>Project: Todo List</h3>
 
                 <!-- Create a todo list -->
@@ -390,7 +389,56 @@
 
                 </div>
 
-              
+                <script>
+                    var array, item;
+
+                    function getNumberOrString(value) {
+                        // Convert a string value to a number if possible
+                        let number_value = Number(value);
+                        if (Number.isNaN(number_value)) {
+                            return value
+                        } else {
+                            return number_value
+                        }
+                    }
+
+                    // Describe this function...
+                    function add_item() {
+                        if (--window.LoopTrap <= 0) throw "Infinite loop.";
+                        array.unshift(getNumberOrString(document.getElementById('input').value));
+                        array.forEach((item) => {
+                            let element_list1 = document.getElementById('list1');
+                            let new_li = document.createElement('li');
+                            new_li.setAttribute("id", 'lili');
+                            new_li.innerText = array.shift();
+                            let new_input = document.createElement('input');
+                            new_input.setAttribute("id", 'check');
+                            new_input.style.visibility = (true) ? 'visible' : 'hidden';
+
+                            new_li.appendChild(new_input);
+                            let new_button = document.createElement('button');
+                            new_button.setAttribute("id", 'check-btn');
+                            new_button.innerText = 'done';
+
+                            new_button.addEventListener('click', (event) => {
+                                new_button.style.backgroundColor = '#ff0000';
+
+                            });
+                            new_li.appendChild(new_button);
+
+                            element_list1.appendChild(new_li);
+                        });
+                    }
+
+
+                    array = [];
+
+
+                    document.getElementById('button').addEventListener('click', (event) => {
+                        add_item();
+
+                    });
+                </script>
 
                 <br><br>
 
@@ -399,9 +447,8 @@
                 <!-- Project: Select a random facilitator -->
                 <h3>Project: Select a random facilitator</h3>
 
-                <div style="background-color: rgb(46, 164, 79);
-        color: white; height: flex;
-        width: 500px; object-fit: cover; display:inline-block;"> 
+                <div style="background-color: rgb(46, 164, 79); color: white; height: 300px;
+    width: 500px; margin-bottom: 35px;">
 
 
                     <input id="names" style=" color: red;   display:inline-block; font-size: 20px; width: 250px; padding:8px; margin:4px;; border-radius:50px;" />
@@ -424,40 +471,6 @@
                 <!-- Project: Select a random facilitator -->
 
                 <h3>Project: Build an image carousel</h3>
-                 
-<div id="main-box" style="object-fit: contain;background-color:lightpink; box-sizing:border-box; color:rgb(51, 51, 51); display:block; height: 642px; width: 500px; text-align:center;">
-
-<div id="carousel-box" style="background-color:lightblue; height: 110px; margin-top:10px">
-
- <div id="img">  
- 
- <img  src="https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-seven-mile-beach-grand-cayman-1024x683.jpg" width="90"> 
- 
-<img src="https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-tivua-island-fiji-1024x683.jpg" width="90"> 
-                                                                                     <img src="https://media.fshoq.com/images/117/beautiful-island-with-a-sandy-beach-and-boat-blue-water-117-medium.jpg" width="90"> 
-</div>
-
-<bu ton id="previous-image"> </button>
-
-<button id="previous-image" style=" color: blue; display:inline-block; font-size: 15px; width: 70px; background-color: rgb(255, 216, 200); padding:8px; margin :4px;; border-radius:50px;">Previous</button>
-
-  
-                                                                                                                                               
-<button id="next-image" style=" color: blue; display:inline-block; font-size: 15px; width: 70px; background-color: rgb(255, 216, 200); padding:8px; margin:4px; border-radius:50px;">Next</button></div>
- 
-   <div id="frame" style="object-fit: cover; background-color:red; box-sizing:border-box; color:rgb(51, 51, 51); display:inline-flex; height: 500px; width: 500px; text-align:center; margin-top:20px;">
-
-
-</div>
-                                                                    
-  </div>
-                
-                <br> <br>
- 
-
-     
-                
-                
             </div>
 
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -652,88 +665,8 @@
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js">
-          
-                    var array, item;
-
-                    function getNumberOrString(value) {
-                        // Convert a string value to a number if possible
-                        let number_value = Number(value);
-                        if (Number.isNaN(number_value)) {
-                            return value
-                        } else {
-                            return number_value
-                        }
-                    }
-
-                    // Describe this function...
-                    function add_item() {
-                        if (--window.LoopTrap <= 0) throw "Infinite loop.";
-                        array.unshift(getNumberOrString(document.getElementById('input').value));
-                        array.forEach((item) => {
-                            let element_list1 = document.getElementById('list1');
-                            let new_li = document.createElement('li');
-                            new_li.setAttribute("id", 'lili');
-                            new_li.innerText = array.shift();
-                            let new_input = document.createElement('input');
-                            new_input.setAttribute("id", 'check');
-                            new_input.style.visibility = (true) ? 'visible' : 'hidden';
-
-                            new_li.appendChild(new_input);
-                            let new_button = document.createElement('button');
-                            new_button.setAttribute("id", 'check-btn');
-                            new_button.innerText = 'done';
-
-                            new_button.addEventListener('click', (event) => {
-                                new_button.style.backgroundColor = '#ff0000';
-
-                            });
-                            new_li.appendChild(new_button);
-
-                            element_list1.appendChild(new_li);
-                        });
-                    }
-
-
-                    array = [];
-
-
-                    document.getElementById('button').addEventListener('click', (event) => {
-                        add_item();
-
-                    });
-                    
-                  
-                
-        
-      var Images_link;
-
-
-Images_link = ['https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-tivua-island-fiji-1024x683.jpg', 'https://media.fshoq.com/images/117/beautiful-island-with-a-sandy-beach-and-boat-blue-water-117-medium.jpg', 'https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-seven-mile-beach-grand-cayman-1024x683.jpg'];
-
-
-document.getElementById('next-image').addEventListener('click', (event) => {
-  let element_frame = document.getElementById('frame');
-  element_frame.replaceChildren();
-  let new_img = document.createElement('img');
-  new_img.setAttribute("src", Images_link[0]);
-
-  element_frame.appendChild(new_img);
-  Images_link.unshift(Images_link.pop());
-
-});
-
-document.getElementById('previous-image').addEventListener('click', (event) => {
-  let element_frame2 = document.getElementById('frame');
-  element_frame2.replaceChildren();
-  let new_img2 = document.createElement('img');
-  new_img2.setAttribute("src", Images_link.slice(-1)[0]);
-
-  element_frame2.appendChild(new_img2);
-  Images_link.unshift(Images_link.pop());
-
-});</script>
+   <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
 
 </body>
 
