@@ -390,58 +390,7 @@
 
                 </div>
 
-                <script>
-                    var array, item;
-
-                    function getNumberOrString(value) {
-                        // Convert a string value to a number if possible
-                        let number_value = Number(value);
-                        if (Number.isNaN(number_value)) {
-                            return value
-                        } else {
-                            return number_value
-                        }
-                    }
-
-                    // Describe this function...
-                    function add_item() {
-                        if (--window.LoopTrap <= 0) throw "Infinite loop.";
-                        array.unshift(getNumberOrString(document.getElementById('input').value));
-                        array.forEach((item) => {
-                            let element_list1 = document.getElementById('list1');
-                            let new_li = document.createElement('li');
-                            new_li.setAttribute("id", 'lili');
-                            new_li.innerText = array.shift();
-                            let new_input = document.createElement('input');
-                            new_input.setAttribute("id", 'check');
-                            new_input.style.visibility = (true) ? 'visible' : 'hidden';
-
-                            new_li.appendChild(new_input);
-                            let new_button = document.createElement('button');
-                            new_button.setAttribute("id", 'check-btn');
-                            new_button.innerText = 'done';
-
-                            new_button.addEventListener('click', (event) => {
-                                new_button.style.backgroundColor = '#ff0000';
-
-                            });
-                            new_li.appendChild(new_button);
-
-                            element_list1.appendChild(new_li);
-                        });
-                    }
-
-
-                    array = [];
-
-
-                    document.getElementById('button').addEventListener('click', (event) => {
-                        add_item();
-
-                    });
-                    
-                  
-                </script>
+              
 
                 <br><br>
 
@@ -705,6 +654,59 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js">
+          
+                    var array, item;
+
+                    function getNumberOrString(value) {
+                        // Convert a string value to a number if possible
+                        let number_value = Number(value);
+                        if (Number.isNaN(number_value)) {
+                            return value
+                        } else {
+                            return number_value
+                        }
+                    }
+
+                    // Describe this function...
+                    function add_item() {
+                        if (--window.LoopTrap <= 0) throw "Infinite loop.";
+                        array.unshift(getNumberOrString(document.getElementById('input').value));
+                        array.forEach((item) => {
+                            let element_list1 = document.getElementById('list1');
+                            let new_li = document.createElement('li');
+                            new_li.setAttribute("id", 'lili');
+                            new_li.innerText = array.shift();
+                            let new_input = document.createElement('input');
+                            new_input.setAttribute("id", 'check');
+                            new_input.style.visibility = (true) ? 'visible' : 'hidden';
+
+                            new_li.appendChild(new_input);
+                            let new_button = document.createElement('button');
+                            new_button.setAttribute("id", 'check-btn');
+                            new_button.innerText = 'done';
+
+                            new_button.addEventListener('click', (event) => {
+                                new_button.style.backgroundColor = '#ff0000';
+
+                            });
+                            new_li.appendChild(new_button);
+
+                            element_list1.appendChild(new_li);
+                        });
+                    }
+
+
+                    array = [];
+
+
+                    document.getElementById('button').addEventListener('click', (event) => {
+                        add_item();
+
+                    });
+                    
+                  
+                
+        
       var Images_link;
 
 
