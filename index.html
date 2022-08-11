@@ -34,6 +34,7 @@
   ======================================================== -->
 </head>
 
+
 <body>
 
     <!-- ======= Mobile nav toggle button ======= -->
@@ -65,11 +66,12 @@
         </div>
     </header>
     <!-- End Header -->
- <!-- ======= Hero Section ======= -->
+
+    <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
         <div class="hero-container" data-aos="fade-in">
             <h1>Welcome To My Page</h1> <br>
-            <p>I am a <span class="typed" data-typed-items="Code Your Future's #Scot-6 Trainee "></span></p>
+            <p>I am a <span class="typed" data-typed-items="Code Your Future #Scot-6 Trainee "></span></p>
         </div>
     </section>
     <!-- End Hero -->
@@ -88,7 +90,7 @@
                     <h4 style=" margin-right: 40px; background-size: cover; display: block;
                     font-size: 20px; background: #ebedf0;
                     float: none;"> <em> I have always been patient to discover new territories, face challenges and learn new subjects which considered to be difficult from scratch. I strongly believe and speaking from my experiences; our capabilities are beyond imagination,
-                        but other elements are involved, so the key to success are not just those potentials and even genius. Hard work, consistency, determination, commitment and setting your goals play an enormous role. (Do not compare yourself to anyone
+                        but other elements are involved, so the key to success is not just those potentials and even genius. Hard work, consistency, determination, commitment and setting your goals play an enormous role. (Do not compare yourself to anyone
                         as our background, our past and stories are different. In my opinion it is better not to begin such a journey at all, but if you have decided to do so, do your best. ( 0 or 100 and not less than 80% ) and no matter what the results
                         and outcome are as far as you do your best. Back to the title and question, coding has been always unknown to me, I mean literally zero knowledge in this case. Do you believe in that everything happens for a reason? Of course I
                         had heard about coding many times but never caught my attention until few weeks ago a gentleman came to our ESOL class at the Cardonald College and introduced CYF. I said to myself give it a shot and find out if it is your cup
@@ -338,9 +340,10 @@
                         padding: 5px;
                         margin-left: 5px;
                     }
+                    /* Create a todo list */
                 </style>
 
-
+                <!-- Create a todo list -->
 
                 <div id="container-items" style=" 
                           border: 
@@ -389,8 +392,43 @@
 
                 </div>
 
-               
+                <!-- Create a todo list -->
+
+
+                <br><br>
+
+                <!-- Create a todo list -->
+
+                <!-- Project: Select a random facilitator -->
+
+                <h3>Project: Select a random facilitator</h3>
+
+                <div style="background-color: rgb(46, 164, 79);
+                color: white; height: flex;
+                width: 500px; object-fit: cover; display:inline-block;">
+
+
+                    <input id="names" style=" color: red;   display:inline-block; font-size: 20px; width: 250px; padding:8px; margin:4px;; border-radius:50px;" />
+
+                    <button id="button" style=" color: blue; display:inline-block; font-size: 15px; padding: 5px; background-color: rgb(255, 216, 200); padding:8px; margin:4px;; border-radius:50px;">Add Name</button>
+                    <br><br>
+
+                    <button id="listof-names" style="color: red; background-color: rgb(255, 216, 20); display:inline-block; font-size: 15px; padding:15px; margin:4px; border-radius:50px;">List of Names</button>
+
+                    <ul id="list"></ul>
+                    <br>
+
+                    <button id="select-facilitator" style=" color: blue; display:inline-block; font-size: 15px;  padding: 5px; background-color: rgb(255, 216, 200); padding:8px; margin:4px;; border-radius:50px;">Select Facilitator
+</button>
+
+                    <ol id="random-names"></ol>
+
+                </div>
+
+                <!-- Project: Select a random facilitator -->
+
                 <script>
+                    // Create a todo list
                     var array, item;
 
                     function getNumberOrString(value) {
@@ -439,41 +477,43 @@
                         add_item();
 
                     });
-                </script>
 
+                    // Create a todo list
+                </script>
                 <br><br>
 
-                <!-- Create a todo list -->
+                <h3>Project: Build an image carousel</h3>
 
-                <!-- Create a todo list -->
+                <div id="main-box" style="object-fit: contain;background-color:lightpink; box-sizing:border-box; color:rgb(51, 51, 51); display:block; height: 642px; width: 500px; text-align:center;">
 
-                <!-- Project: Select a random facilitator -->
-                <h3>Project: Select a random facilitator</h3>
+                    <div id="carousel-box" style="background-color:lightblue; height: 110px; margin-top:10px">
 
-                <div style="background-color: rgb(46, 164, 79); color: white; height: 300px;
-    width: 500px; margin-bottom: 35px;">
+                        <div id="img">
+
+                            <img src="https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-seven-mile-beach-grand-cayman-1024x683.jpg" width="90">
+
+                            <img src="https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-tivua-island-fiji-1024x683.jpg" width="90">
+                            <img src="https://media.fshoq.com/images/117/beautiful-island-with-a-sandy-beach-and-boat-blue-water-117-medium.jpg" width="90">
+                        </div>
+
+                        <bu ton id="previous-image">
+                            </button>
+
+                            <button id="previous-image" style=" color: blue; display:inline-block; font-size: 15px; width: 70px; background-color: rgb(255, 216, 200); padding:8px; margin :4px;; border-radius:50px;">Previous</button>
 
 
-                    <input id="names" style=" color: red;   display:inline-block; font-size: 20px; width: 250px; padding:8px; margin:4px;; border-radius:50px;" />
 
-                    <button id="button" style=" color: blue; display:inline-block; font-size: 15px; padding: 5px; background-color: rgb(255, 216, 200); padding:8px; margin:4px;; border-radius:50px;">Add Name</button>
-                    <br><br>
+                            <button id="next-image" style=" color: blue; display:inline-block; font-size: 15px; width: 70px; background-color: rgb(255, 216, 200); padding:8px; margin:4px; border-radius:50px;">Next</button></div>
 
-                    <button id="listof-names" style="color: red; background-color: rgb(255, 216, 20); display:inline-block; font-size: 15px; padding:15px; margin:4px; border-radius:50px;">List of Names</button>
+                    <div id="frame" style="object-fit: contain; background-color:red; box-sizing:border-box; color:rgb(51, 51, 51); display:inline-flex; height: 500px; width: 500px; text-align:center; margin-top:20px;">
 
-                    <ul id="list"></ul>
-                    <br>
 
-                    <button id="select-facilitator" style=" color: blue; display:inline-block; font-size: 15px;  padding: 5px; background-color: rgb(255, 216, 200); padding:8px; margin:4px;; border-radius:50px;">Select Facilitator
-</button>
-
-                    <ol id="random-names"></ol>
+                    </div>
 
                 </div>
 
-                <!-- Project: Select a random facilitator -->
 
-                <h3>Project: Build an image carousel</h3>
+                <br><br>
             </div>
 
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
