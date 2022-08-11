@@ -253,9 +253,36 @@
      new PureCounter();
 
  })()
+//   
+ var Images_link;
+
+
+ Images_link = ['https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-tivua-island-fiji-1024x683.jpg', 'https://media.fshoq.com/images/117/beautiful-island-with-a-sandy-beach-and-boat-blue-water-117-medium.jpg', 'https://www.celebritycruises.com/blog/content/uploads/2021/06/white-sand-beaches-seven-mile-beach-grand-cayman-1024x683.jpg'];
+
+
+ document.getElementById('next-image').addEventListener('click', (event) => {
+     let element_frame = document.getElementById('frame');
+     element_frame.replaceChildren();
+     let new_img = document.createElement('img');
+     new_img.setAttribute("src", Images_link[0]);
+
+     element_frame.appendChild(new_img);
+     Images_link.unshift(Images_link.pop());
+
+ });
+
+ document.getElementById('previous-image').addEventListener('click', (event) => {
+     let element_frame2 = document.getElementById('frame');
+     element_frame2.replaceChildren();
+     let new_img2 = document.createElement('img');
+     new_img2.setAttribute("src", Images_link.slice(-1)[0]);
+
+     element_frame2.appendChild(new_img2);
+     Images_link.unshift(Images_link.pop());
+
+ });
 
  // Project: Select a random facilitator
-
 
  var names, item;
 
@@ -267,16 +294,6 @@
      } else {
          return number_value
      }
- }
-
- function randomInt(n) {
-     // Return a random number from in [0, n[
-     return Math.floor(Math.random() * n);
- }
-
- function randomMember(arr) {
-     // Return a random member of the array
-     return arr[randomInt(arr.length)]
  }
 
 
@@ -302,10 +319,15 @@
  document.getElementById('select-facilitator').addEventListener('click', (event) => {
      let element_random_names = document.getElementById('random-names');
      let new_li2 = document.createElement('li');
-     new_li2.innerText = randomMember(names);
+     new_li2.innerText = names.reduce((a, b) => a + b, 0);
 
      element_random_names.appendChild(new_li2);
 
  });
 
  // Project: Select a random facilitator
+
+
+
+ //
+
